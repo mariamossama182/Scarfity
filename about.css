@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Harmattan:wght@400;500;600;700&family=Rakkas&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    padding-top: 125px ;
+}
+.about-banner,
+.about-container,
+.wrap,
+.left,
+.right {
+    transform: none ;
+}
+
+
+/* Banner */
+.about-banner {
+  position: relative;
+  height: 50vh;
+  background: url("images/about.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.about-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+.about-title {
+  position: relative;
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 5px;
+ animation: textUp 1.2s ease;
+}
+
+
+
+
+/* Content */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 5%;
+  gap: 30px;
+  background: #fdf7f2;
+  flex-wrap: wrap;
+}
+
+
+
+
+ .about-left, .about-right, .about-video {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.about-right {
+  width: 30%;
+  order: 3;
+  text-align: right;
+  align-items: flex-end;
+   direction: rtl;
+}
+
+
+
+
+.about-left h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #c9a26d;
+  font-weight: 400;
+}
+
+
+
+
+.about-left h3 {
+  font-size: 22px;
+  color: #8d6e63;
+  margin-bottom: 15px;
+}
+
+
+
+
+.about-left p {
+  color: #666;
+  line-height: 1.8;
+}
+
+
+
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0 ;
+}
+
+
+
+.about-right p {
+  color: #c9a26d;
+  line-height: 1.8;
+}
+
+
+
+.arabic {
+  font-family: "Amiri", sans-serif;
+  font-size: 38px;
+  line-height: 1.6;
+  direction: rtl;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+
+
+
+.arabic-sub {
+  font-family: "Amiri", sans-serif;
+  font-size: 22px;
+  line-height: 1.8;
+  direction: rtl;
+ 
+}
+
+
+
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+
+
+
+
+
+
+
+.delay {
+  animation-delay: 0.4s;
+}
+
+
+
+
+
+
+
+
+.delay-2 {
+  animation-delay: 0.8s;
+}
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes textUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+
+
+  .about-title {
+    font-size: 40px;
+  }
+}
+
+
+.about-video {
+    order: 1;
+    margin: 0;
+    width: auto;
+}
+
+
+.about-video h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #c9a26d;
+}
+
+
+.about-video video {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 30px;
+    border: 2px solid #f8d7da;
+    background: white;
+}
+
+
+@media (max-width: 768px) {
+  .about-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-video {
+    width: 100%;
+    padding: 10px;
+  }
+
+
+  .about-video video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .about-left h2 {
+        font-size: 30px; /* صغرناه من 40 */
+        margin-bottom: 20px;
+    }
+
+    .arabic {
+        font-size: 28px; /* صغرناه من 38 عشان م يخرجش بره الشاشة */
+    }
+
+    .about-left, .about-right, .about-video {
+        width: 100%; /* في الموبايل ياخد العرض كله */
+    }
+}

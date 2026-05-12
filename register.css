@@ -1,0 +1,144 @@
+body {
+    padding-top: 120px;
+}
+
+
+
+
+#registerform {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 500px;
+    margin:auto;
+}
+
+
+
+
+#registerform input{
+    border:1px solid #eee;
+    font-size: 22px;
+    width: 100%;
+    height:50%;
+    padding:15px;
+    margin-left: 0px;
+}
+
+
+
+
+
+
+
+
+#registerform span{
+    font-size: 30px;
+    color: #c9a26d;
+}
+
+
+
+
+
+
+
+
+
+
+#registerform button{
+font-size: 30px;
+border: 1px solid #ccc;
+background: #c9a26d;
+color: white;
+cursor: pointer;
+width:100%;
+height:50px;
+margin:auto;
+transition: 0.3s;
+margin-bottom: 30px;
+margin-top: 10px;
+border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+ #registerform button:hover{
+ background-color: #e8b4b8;
+ }
+
+
+
+
+.card.shadow-lg {
+    display: inline-block;
+    min-width: auto;
+    max-width: 500px;      
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+.row.justify-content-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 50px;
+    }
+
+
+    .card.shadow-lg {
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    #registerform {
+        gap: 15px;
+        padding: 20px;
+    }
+
+
+    #registerform span {
+        font-size: 20px;
+    }
+
+
+    #registerform input {
+        font-size: 16px;
+        padding: 12px;
+        height: auto;
+    }
+
+
+    #registerform button {
+        font-size: 22px;
+        height: 50px;
+        border-radius: 20px;
+    }
+
+
+   
+}
+
+
+

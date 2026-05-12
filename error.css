@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #fdf7f2, #f8d7da);
+}
+
+
+.error-container {
+  text-align: center;
+}
+
+
+/* الصورة */
+.error-container img {
+  width: 80%;
+  height: 40%;
+  margin-bottom: 20px;
+}
+
+
+/* الرقم */
+.error-container h1 {
+  font-size: 90px;
+  color: #d81a1aba;
+}
+
+
+/* العنوان */
+.error-container h2 {
+  font-size: 24px;
+  color: #d81a1aba;
+  margin: 10px 0;
+}
+
+
+/* النص */
+.error-container p {
+  color: #d81a1aba;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+/* الزر */
+.home-btn {
+  padding: 10px 20px;
+  margin-top:10px;
+  background: #fff;
+  color: #c97;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+
+.home-btn:hover {
+  background: #c97;
+  color: #fff;
+}
+
