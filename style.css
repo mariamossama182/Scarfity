@@ -6,6 +6,7 @@ html {
 }
 
 * {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -732,10 +733,6 @@ main {
     font-size: 12px;
 }
 
-#cont {
-    max-width: 700px;
-    margin: 20px auto;
-}
 
 .profile-dropdown{
     position: relative;
