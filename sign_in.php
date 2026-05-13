@@ -8,12 +8,6 @@ $email_error = "";
 $pass_error = "";
 
 
-$host = "localhost";
-$user = "root";
-$password = "";
-$db_name = "scarfity";
-
-
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $email = $_POST['email'];
     $pass = $_POST['password'];
