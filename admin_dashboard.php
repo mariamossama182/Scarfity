@@ -15,7 +15,7 @@ if(isset($_POST['update-product'])){
     if(!empty($_FILES['image_file']['name'])){
         $img = $_FILES['image_file']['name'];
         $tmp_name = $_FILES['image_file']['tmp_name'];
-        move_uploaded_file($tmp_name, "images/.$img");
+        move_uploaded_file($tmp_name, "images/".$img);
 
         $stmt = $conn->prepare("UPDATE products SET name=?, price=?, image=? WHERE id=?");
         $stmt ->bind_param( "sdsi", $name, $price, $img, $id);
@@ -104,9 +104,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'main' ;
 
         <ul class="sidebar-menu">
             <div class="back-to-home">
-                    <a href="index.php">
                         <i><a href="index.php">Home</a></i>
-                    </a>
                 </div>
             <li><a href="admin_dashboard.php?page=main">Dashboard</a></li>
             <li><a href="admin_dashboard.php?page=products"> Products List </a></li>
@@ -274,7 +272,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'main' ;
 
                     <h1> Edit Scarf </h1>
                     <div class="form-container">
-                        <form action="admin_dashboard.php" method="POST" enctype="multimedia/form-data">
+                        <form action="admin_dashboard.php" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="product-id" value="<?php echo $product['id']; ?>" >
 
                             <div class="input-group">
