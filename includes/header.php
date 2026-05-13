@@ -20,10 +20,8 @@
             ?>
             <a href="admin_dashboard.php">Dashboard</a>
             <?php endif; ?>
-
-
-
         </div>
+
         <div class="nav-right-side">
         <div onclick="open_close_cart()" >
            
@@ -37,9 +35,6 @@
             <div class="profile-icon" onclick="toggleDropdown()">
                 <img src="images/profile.png" alt="profile" class="profile-img" style="width:40px ; cursor: pointer">
             </div>
-
-
-
             <ul class="dropdown-menu" id="dropdown">
                 <?php
                     if(isset($_SESSION['username'])){
@@ -51,11 +46,10 @@
                         echo "<li><a href='register.php'>Register</a></li>";
                     }
                      ?>
-               
             </ul>            
+                </div>
         </div>
- </div>
-    </nav>
+</nav>
 
     <div class="shipping-bar">
         <div class="marquee-content" behavior="scroll" direction="left" scrollamount="6">
