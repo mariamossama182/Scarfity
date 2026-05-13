@@ -15,7 +15,7 @@ if(isset($_POST['register_btn'])){
     
 
 if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-    $email_error = "email must include @";
+    $email_error = "email must include '@' and'.'";
 }
 if(strlen($pass) < 8){
     $pass_error = "password must be at least 8 characters";
