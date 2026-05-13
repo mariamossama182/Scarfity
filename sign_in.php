@@ -80,16 +80,11 @@ if(isset($conn)){
      <div class="container">
         <div class="row justify-content-center align-items-center vh-95">
             <div class="col-lg-4">
-                <div class="card shadow-lg p-4 constant-shadow">
+                <div class="card shadow-lg p-4 mb-3 constant-shadow">
                     <h3 class="text-center mb-6" style="color: #c9a26d"><b>Sign In</b></h3>
-                        <div id="signin">
 
                         <form id="registerform" class="needs_validation" method="post" action="" novalidate>
-                                                    
-                            <div class="mb-3">
-
-
-
+                          
                             <label>
                                 <span>Email Address</span>
                                     <input type="email" name="email" placeholder="Enter Email" value = "<?php echo isset($email) ? $email : ''; ?>" required>
@@ -112,8 +107,7 @@ if(isset($conn)){
                                         </label>
 
                             <button type="submit" class="btn btn-primary w-100">Submit</button>
-                            </form>
-                                        </div>                            
+                            </form>                           
                 </div>
             </div>
         </div>
