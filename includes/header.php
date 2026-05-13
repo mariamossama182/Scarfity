@@ -1,8 +1,5 @@
-
-
 <nav>
-        <div>
-            
+        <div> 
             <div class="hamburger" onclick="toggleMenu()">
         ☰
     </div>  
@@ -49,9 +46,6 @@
                         echo "<li class='user-name'>Hello, " . htmlspecialchars($_SESSION['username']). "</li>";
                         echo "<li><a href='logout.php'>Log out</a></li>";
 
-
-
-
                     }else{
                         echo "<li><a href='sign_in.php'>Sign In</a></li>";
                         echo "<li><a href='register.php'>Register</a></li>";
@@ -60,12 +54,8 @@
                
             </ul>            
         </div>
-                    </div>
-
-
+ </div>
     </nav>
-
-
 
     <div class="shipping-bar">
         <div class="marquee-content" behavior="scroll" direction="left" scrollamount="6">
@@ -80,8 +70,6 @@
         </div>
     </div>
 
-
-
 <?php if(isset($_SESSION['message'])): ?>
     <div class="message-box <?php echo $_SESSION['msg_type'] ?? ''; ?>" id="flash-msg">
         <?php
@@ -90,8 +78,6 @@
             unset($_SESSION['msg_type']);
         ?>
     </div>
-
-
 
     <script>
         setTimeout(function(){
@@ -103,13 +89,8 @@
     </script>
 <?php endif; ?>
 
-
-
-
 <script>
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
 }
 </script>
-
-
