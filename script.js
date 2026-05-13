@@ -3,99 +3,30 @@ function getCart(){
 }
 
 
-
-
-
-
-
-
 function saveCart(cart){
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 
 
-
-
-
-
-
 function updateNavCount(){
 
-
-
-
-
-
-
-
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-
-
-
-
-
-
-
     let count = 0;
-
-
-
-
-
-
-
 
     cart.forEach(item => {
         count += item.qty;
     });
 
 
-
-
-
-
-
-
     document.getElementById("count").innerText = count;
 }
 
-
-
-
-
-
-
-
 function addToCart(id, name, price, image){
-
-
-
-
-
-
-
-
     count++;
     document.getElementById("count").innerText = count;
     let cart = getCart();
-
-
-
-
-
-
-
-
-    let item = cart.find(p => p.id === id);
-
-
-
-
-
-
-
+  let item = cart.find(p => p.id === id);
 
     if(item){
         item.qty++;
@@ -103,128 +34,29 @@ function addToCart(id, name, price, image){
         cart.push({ id, name, price, image, qty: 1 });
     }
 
-
-
-
-
-
-
-
     saveCart(cart);
     displayCart();
 updateSummary();
 }
 
-
-
-
-
-
-
-
 updateNavCount();
 
-
-
-
-
-
-
-
 function displayCart(){
-
-
-
-
-
-
-
-
-    let cart = getCart();
-
-
-
-
-
-
-
-
-    let container = document.getElementById("cart_items");
+ let cart = getCart();
+ let container = document.getElementById("cart_items");
     container.innerHTML = "";
+ let total = 0;
+ document.querySelector(".count_item_cart").innerText = cart.length;
+  cart.forEach(item => {
 
-
-
-
-
-
-
-
-    let total = 0;
-
-
-
-
-
-
-
-
-    document.querySelector(".count_item_cart").innerText = cart.length;
-
-
-
-
-
-
-
-
-    cart.forEach(item => {
-
-
-
-
-
-
-
-
-        let subtotal = item.price * item.qty;
+    let subtotal = item.price * item.qty;
         total += subtotal;
-
-
-
-
-
-
-
-
-        container.innerHTML += `
+   container.innerHTML += `
         <div class="item_cart">
-
-
-
-
-
-
-
-
-            <img src="images/${item.image}" />
-
-
-
-
-
-
-
-
-            <div class="content">
+          <img src="images/${item.image}" />
+         <div class="content">
                 <h4>${item.name}</h4>
                 <p class="price_cart">${item.price} EGP</p>
-
-
-
-
-
-
-
 
                 <div class="quantity_control">
                     <button onclick="decreaseQty(${item.id})">-</button>
@@ -232,12 +64,6 @@ function displayCart(){
                     <button onclick="increaseQty(${item.id})">+</button>
                 </div>
             </div>
-
-
-
-
-
-
 
 
  <button onclick="removeItem(${item.id})" class="delete_item" >
@@ -249,20 +75,9 @@ function displayCart(){
 
 
 
-
-
-
-
-
     document.querySelector(".price_cart_total").innerText = total + " EGP";
     updateNavCount();
 }
-
-
-
-
-
-
 
 
 function increaseQty(id){
@@ -276,38 +91,9 @@ function increaseQty(id){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function decreaseQty(id){
     let cart = getCart();
     let item = cart.find(p => p.id === id);
-
-
-
-
-
-
-
 
     if(item){
         item.qty--;
@@ -316,24 +102,11 @@ function decreaseQty(id){
         }
     }
 
-
-
-
-
-
-
-
     saveCart(cart);
     displayCart();
     updateNavCount();
     updateSummary();
 }
-
-
-
-
-
-
 
 
 function removeItem(id){
@@ -394,59 +167,11 @@ function updateSummary() {
 
 
 
-
-
-
-
-
 window.onload = function(){
     displayCart();
     updateNavCount();
     updateSummary();
 }
-
-
-
-
-
-
-
-
-document.getElementById('loginform').addEventListener('submit', function(event){
-    const form = event.target;
-
-
-
-
-
-
-
-
-    if(!form.checkValidity()){
-        event.preventDefault();
-        event.stopPropagation();
-    }
-    else{
-        event.preventDefault();
-        window.location.href = "index.html";
-        alert('Login Successfully !');
-       
-    }
-    form.classList.add('was-validated');
-}, false)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -456,22 +181,8 @@ function toggleDropdown(){
     document.getElementById("dropdown").classList.toggle("show");
 }
 
-
-
-
-
-
-
-
 window.onclick = function(event){
     if (! event.target.matches('.profile-img')){
-
-
-
-
-
-
-
 
         var dropdowns = document.getElementsByClassName("dropdown-menu");
        
@@ -483,38 +194,5 @@ window.onclick = function(event){
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
