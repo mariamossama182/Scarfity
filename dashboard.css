@@ -171,7 +171,6 @@ color: #c9a26d;
 
 }
 
-
 .btn-edit {
     background-color: #c9a26d;
     color: #fff;
@@ -193,8 +192,6 @@ color: #c9a26d;
     border: 1px solid #f8d7da;
 }
 
-
-
 .input-group {
     width: 100%;
     padding: 10px;
@@ -202,8 +199,6 @@ color: #c9a26d;
     border: 1px solid #f8d7da;
     border-radius: 5px;
 }
-
-
 
 
 .add-product-button{
@@ -351,8 +346,6 @@ color: #c9a26d;
     }
 
 
-
-
     .back-to-home i a{
         background: none;
         border: none;
@@ -393,8 +386,6 @@ color: #c9a26d;
     .btn-edit,.btn-delete{
         padding:3px 6px;
         font-size: smaller;
-       
-
 
     }
 
