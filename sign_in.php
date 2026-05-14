@@ -87,14 +87,10 @@ if(isset($conn)){
         <div class="row justify-content-center align-items-center vh-95">
             <div class="col-lg-4">
                 <div class="card shadow-lg p-4 constant-shadow">
-                    <h3 class="text-center mb-6" style="color: #c9a26d"><b>Sign In</b></h3>
-                        <div id="signin">
+                    <h3 class="text-center mb-6" style="color: #c9a26d"><b>Sign In</b></h3>    
 
                         <form id="registerform" class="needs_validation" method="post" action="" novalidate>
-                                                    
-                            <div class="mb-3">
-
-
+                        <div class="mb-3">                            
 
                             <label>
                                 <span>Email Address</span>
@@ -119,7 +115,7 @@ if(isset($conn)){
 
                             <button type="submit" class="btn btn-primary w-100">Submit</button>
                             </form>
-                                        </div>                            
+                                                   
                 </div>
             </div>
         </div>
@@ -133,5 +129,7 @@ if(isset($conn)){
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-------JS-------->
     <script src="script.js"></script>
+
+
 </body>
 </html>
