@@ -27,23 +27,10 @@ body {
 
 
 
-
-
-
-
-
 #registerform span{
     font-size: 30px;
     color: #c9a26d;
 }
-
-
-
-
-
-
-
-
 
 
 #registerform button{
@@ -62,17 +49,9 @@ border-radius: 30px;
 }
 
 
-
-
-
-
-
-
  #registerform button:hover{
  background-color: #e8b4b8;
  }
-
-
 
 
 .card.shadow-lg {
@@ -84,10 +63,6 @@ border-radius: 30px;
     border: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
-
-
-
-
 
 
 .row.justify-content-center {
@@ -136,9 +111,4 @@ border-radius: 30px;
         border-radius: 20px;
     }
 
-
-   
 }
-
-
-

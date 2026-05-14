@@ -3,16 +3,13 @@ session_start();
 
 include'includes/db_connect.php';
 
-
 $email_error = "";
 $pass_error = "";
-
 
 $host = "localhost";
 $user = "root";
 $password = "";
 $db_name = "scarfity";
-
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $email = $_POST['email'];
@@ -58,9 +55,6 @@ if(isset($conn)){
     $conn->close();
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +71,6 @@ if(isset($conn)){
 </head>
 <body>
     
-
       <?php include 'includes/header.php'; ?>
     <?php include 'cart.php'; ?>
      
@@ -121,15 +114,10 @@ if(isset($conn)){
         </div>
     <div>
 
-
-
-
-
     <!-------boostrap js-------->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-------JS-------->
     <script src="script.js"></script>
-
 
 </body>
 </html>
