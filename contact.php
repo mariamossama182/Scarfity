@@ -197,7 +197,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             isValid = false;
         }else{
             phoneError.innerText = "";
-            phoneError.classList.remove('invalid'); 
+            phone.classList.remove('invalid'); 
         }
 
 
