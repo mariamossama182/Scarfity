@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- Errors -->
 <?php   if (isset($_SESSION['success'])):   ?> 
 
-<div class="message-box success">
+<div id="success-message" class="message-box success">
 
     <?php   echo $_SESSION['success'];
             unset($_SESSION['success']);    ?>  </div>
@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="POST" id="contactForm" novalidate>
 
             <label>
-                <span>Full Name</span>
+                <span>Name</span>
                 <input type="text" name="name" id="name" placeholder="Type your name" value="<?php echo htmlspecialchars($name); ?>" required minlength="3"> 
                 <span class="error-text" id="nameError"></span>
             </label>
@@ -197,7 +197,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             isValid = false;
         }else{
             phoneError.innerText = "";
-            phone.classList.remove('invalid'); 
+            phoneError.classList.remove('invalid'); 
         }
 
 
@@ -213,10 +213,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         return isValid;
     }
-
-    // form.querySelectorAll('input, textarea').forEach(input=>{
-    //     input.addEventListener('input', validate);
-    // });
 
     form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -243,9 +239,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         });
         }
     });
+</script>
 
+<script>
 
+setTimeout(function () {
+
+    let message = document.getElementById("success-message");
+
+    if(message){
+        message.style.display = "none";
+    }
+
+}, 3000);
 
 </script>
+
 </body>
 </html>
