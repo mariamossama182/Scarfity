@@ -7,13 +7,31 @@ if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] != 1) {
     exit();
 }
 
+
+if(isset($_POST['add_product'])){
+    $name = $_POST['name'];
+    $price = $_POST['price'];
+
+    $img = time() . "_" .  $_FILES['image_file']['name'];
+    $tmp_name = $_FILES['image_file']['tmp_name'];
+    move_uploaded_file($tmp_name, "images/".$img);
+
+   $stmt = $conn->prepare("INSERT INTO products (name, price, image) values ( ?, ?, ?)");
+   $stmt->bind_param("sds", $name, $price, $img);
+   $stmt->execute();
+   $stmt->close();
+
+    header("Location: admin_dashboard.php?page=products");
+    exit();
+}
+
 if(isset($_POST['update-product'])){
     $id = $_POST['product-id'];
     $name = $_POST['name'];
     $price = $_POST['price'];
 
     if(!empty($_FILES['image_file']['name'])){
-        $img = $_FILES['image_file']['name'];
+        $img = time() . "_" .  $_FILES['image_file']['name'];
         $tmp_name = $_FILES['image_file']['tmp_name'];
         move_uploaded_file($tmp_name, "images/".$img);
 
@@ -33,23 +51,6 @@ if(isset($_POST['update-product'])){
     exit();
 }
 
-
-if(isset($_POST['add_product'])){
-    $name = $_POST['name'];
-    $price = $_POST['price'];
-
-    $img = $_FILES['image_file']['name'];
-    $tmp_name = $_FILES['image_file']['tmp_name'];
-    move_uploaded_file($tmp_name, "images/".$img);
-
-   $stmt = $conn->prepare("INSERT INTO products (name, price, image) values ( ?, ?, ?)");
-   $stmt->bind_param("sds", $name, $price, $img);
-   $stmt->execute();
-   $stmt->close();
-
-    header("Location: admin_dashboard.php?page=products");
-    exit();
-}
 
 
 if (isset($_GET['delete-product'])) {
